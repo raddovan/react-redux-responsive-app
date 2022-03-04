@@ -13,12 +13,12 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import logo from "../assets/logo3.png";
 import { useSelector, useDispatch } from "react-redux";
-import { signin } from "../actions";
+import { signin, toggleSnackbarOpen } from "../actions";
 
 const pages = ["About Me", "Gallery"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
-const ResponsiveAppBar = () => {
+const ResponsiveAppBar = (props) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -36,16 +36,22 @@ const ResponsiveAppBar = () => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+  const handleLogin = () => {
+    dispatch(signin());
+    dispatch(toggleSnackbarOpen("Welcome, you are now logged in!"));
+  };
   const handleCloseMenuList = (item) => {
     if (item == "Logout") {
       setAnchorElUser(null);
-      return dispach(signin());
+      dispatch(toggleSnackbarOpen("Successfully logged out!"));
+      return dispatch(signin());
     } else {
       return null;
     }
   };
   const isLogged = useSelector((state) => state.isLogged);
-  const dispach = useDispatch();
+
+  const dispatch = useDispatch();
   return (
     <AppBar
       position="static"
@@ -151,7 +157,7 @@ const ResponsiveAppBar = () => {
                 </Menu>
               </>
             ) : (
-              <Button color="inherit" onClick={() => dispach(signin())}>
+              <Button color="inherit" onClick={handleLogin}>
                 Login
               </Button>
             )}
