@@ -41,7 +41,7 @@ const ResponsiveAppBar = (props) => {
     dispatch(toggleSnackbarOpen("Welcome, you are now logged in!"));
   };
   const handleCloseMenuList = (item) => {
-    if (item == "Logout") {
+    if (item === "Logout") {
       setAnchorElUser(null);
       dispatch(toggleSnackbarOpen("Successfully logged out!"));
       return dispatch(signin());
