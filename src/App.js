@@ -1,14 +1,13 @@
-import './App.css';
-import AppBar from './components/AppBar';
-import Content from './components/Content';
-import Footer from './components/Footer';
+import React from "react";
+import "./App.css";
+import AppBar from "./components/AppBar";
+import Content from "./components/Content";
 
 function App() {
   return (
-    <div className='global'>
-     <AppBar/>
-     <Content/>
-     <Footer/>
+    <div>
+      <AppBar />
+      <Content />
     </div>
   );
 }
