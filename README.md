@@ -1,7 +1,11 @@
 ## Default styling is Material design
+https://mui.com/
 
 ## Online tool for creating gradient colors
 https://angrytools.com/gradient/
+
+## Live Demo
+https://react-redux-responsive-app.vercel.app/
 
 # Getting Started with Create React App
 
