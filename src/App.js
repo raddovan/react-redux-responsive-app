@@ -1,16 +1,15 @@
 import React from "react";
 import "./App.css";
-import AppBar from "./components/AppBar";
-import Content from "./components/Content";
-import Snackbar from "./components/Snackbar";
+import Homepage from "./pages/Homepage";
+import { Routes, Route } from "react-router-dom";
+import Signin from "./pages/signin/Signin";
 
 function App() {
   return (
-    <div>
-      <AppBar />
-      <Content />
-      <Snackbar />
-    </div>
+    <Routes>
+      <Route path="/" element={<Homepage />} />
+      <Route path="signin" element={<Signin />} />
+    </Routes>
   );
 }
 

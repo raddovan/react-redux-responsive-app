@@ -1,0 +1,28 @@
+.section {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 0px;
+  top: -1px;
+
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support */
+}
+.signin {
+  position: absolute;
+  width: 250px;
+  height: 111px;
+  left: 198px;
+  top: 141px;
+
+  font-family: Sacramento;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 76px;
+  line-height: 111px;
+  /* identical to box height */
+
+  color: #ffffff;
+}
