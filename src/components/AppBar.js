@@ -14,9 +14,13 @@ import MenuItem from "@mui/material/MenuItem";
 import logo from "../assets/logo3.png";
 import { useSelector, useDispatch } from "react-redux";
 import { signin, toggleSnackbarOpen } from "../actions";
+import AccountCircle from "@mui/icons-material/AccountCircle";
+import MailIcon from "@mui/icons-material/Mail";
+import NotificationsIcon from "@mui/icons-material/Notifications";
+import Badge from "@mui/material/Badge";
 
 const pages = ["About Me", "Gallery"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const settings = ["Profile", "Logout"];
 
 const ResponsiveAppBar = (props) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -38,7 +42,7 @@ const ResponsiveAppBar = (props) => {
   };
   const handleLogin = () => {
     dispatch(signin());
-    dispatch(toggleSnackbarOpen("Welcome, you are now logged in!"));
+    dispatch(toggleSnackbarOpen("Welcome Admin, you are now logged in!"));
   };
   const handleCloseMenuList = (item) => {
     if (item === "Logout") {
@@ -49,6 +53,7 @@ const ResponsiveAppBar = (props) => {
       return null;
     }
   };
+  const go = () => {};
   const isLogged = useSelector((state) => state.isLogged);
 
   const dispatch = useDispatch();
@@ -115,14 +120,24 @@ const ResponsiveAppBar = (props) => {
           <Box sx={{ flexGrow: 0 }}>
             {isLogged ? (
               <>
-                <Tooltip title="Open settings">
-                  <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                    <Avatar
-                      alt="Remy Sharp"
-                      src="/static/images/avatar/2.jpg"
-                    />
-                  </IconButton>
-                </Tooltip>
+                <Toolbar variant="dense">
+                  <Typography variant="h6" color="inherit" component="div">
+                    Admin
+                  </Typography>
+                  <Tooltip title="Open settings">
+                    <IconButton
+                      size="large"
+                      edge="end"
+                      aria-label="account of current user"
+                      aria-haspopup="true"
+                      onClick={handleOpenUserMenu}
+                      color="inherit"
+                    >
+                      <AccountCircle />
+                    </IconButton>
+                  </Tooltip>
+                </Toolbar>
+
                 <Menu
                   sx={{ mt: "45px" }}
                   id="menu-appbar"

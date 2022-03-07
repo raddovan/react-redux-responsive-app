@@ -8,7 +8,7 @@ function Content() {
   return (
     <Container className="content">
       <Row align="center">
-        <Col sm={6}>
+        <Col sm={6} className="right">
           <Typography variant="h8" component="h3" className="gradient__text">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
@@ -17,8 +17,8 @@ function Content() {
             here', making it look like readable English.
           </Typography>
         </Col>
-        <Col sm={6}>
-          <img src={ai} alt="ai" height={600} />
+        <Col sm={6} className="left_img">
+          <img src={ai} alt="ai" height={"50%"} width={"100%"} />
         </Col>
       </Row>
     </Container>
