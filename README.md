@@ -1,10 +1,15 @@
+Simple demo app, with responsive design, like boilerplate with react-router and react-redux state managment.
+
 ## Default styling is Material design
+
 https://mui.com/
 
 ## Online tool for creating gradient colors
+
 https://angrytools.com/gradient/
 
 ## Live Demo
+
 https://react-redux-responsive-app.vercel.app/
 
 # Getting Started with Create React App
@@ -12,6 +17,7 @@ https://react-redux-responsive-app.vercel.app/
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+
 In the project directory, you can run:
 
 ### `npm start`
