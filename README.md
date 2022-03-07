@@ -1,6 +1,10 @@
 Simple demo app, with responsive design, like boilerplate with react-router and react-redux state managment.
 
-## Default styling is Material design
+- React router V6
+- React redux 7.1
+- MUI 5.5.0
+
+## Default styling is with Material design
 
 https://mui.com/
 
