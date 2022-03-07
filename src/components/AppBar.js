@@ -14,6 +14,7 @@ import logo from "../assets/logo3.png";
 import { useSelector, useDispatch } from "react-redux";
 import { signin, toggleSnackbarOpen } from "../actions";
 import AccountCircle from "@mui/icons-material/AccountCircle";
+import { useNavigate } from "react-router";
 
 const pages = ["About Me", "Gallery"];
 const settings = ["Profile", "Logout"];
@@ -48,6 +49,11 @@ const ResponsiveAppBar = (props) => {
     } else {
       return null;
     }
+  };
+  let navigate = useNavigate();
+  const goto = () => {
+    handleLogin();
+    navigate("/signin");
   };
   const isLogged = useSelector((state) => state.isLogged);
 
@@ -160,7 +166,7 @@ const ResponsiveAppBar = (props) => {
                 </Menu>
               </>
             ) : (
-              <Button color="inherit" onClick={handleLogin}>
+              <Button color="inherit" onClick={goto}>
                 Login
               </Button>
             )}

@@ -10,11 +10,16 @@
   backdrop-filter: blur(40px);
   /* Note: backdrop-filter has minimal browser support */
 }
+.logo {
+  position: absolute;
+  left: 170px;
+  top: 150px;
+}
 .signin {
   position: absolute;
   width: 250px;
   height: 111px;
-  left: 198px;
+  left: 280px;
   top: 141px;
 
   font-family: Sacramento;
@@ -22,7 +27,30 @@
   font-weight: normal;
   font-size: 76px;
   line-height: 111px;
+
   /* identical to box height */
 
-  color: #ffffff;
+  color: green;
+}
+
+.email {
+  position: absolute;
+  width: 100%;
+
+  left: 198px;
+  top: 250px;
+}
+.password {
+  position: absolute;
+
+  left: 198px;
+  top: 350px;
+}
+
+.signin_button {
+  position: absolute;
+  width: 350px;
+
+  left: 198px;
+  top: 450px;
 }
