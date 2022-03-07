@@ -7,7 +7,6 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
@@ -15,9 +14,6 @@ import logo from "../assets/logo3.png";
 import { useSelector, useDispatch } from "react-redux";
 import { signin, toggleSnackbarOpen } from "../actions";
 import AccountCircle from "@mui/icons-material/AccountCircle";
-import MailIcon from "@mui/icons-material/Mail";
-import NotificationsIcon from "@mui/icons-material/Notifications";
-import Badge from "@mui/material/Badge";
 
 const pages = ["About Me", "Gallery"];
 const settings = ["Profile", "Logout"];
@@ -53,7 +49,6 @@ const ResponsiveAppBar = (props) => {
       return null;
     }
   };
-  const go = () => {};
   const isLogged = useSelector((state) => state.isLogged);
 
   const dispatch = useDispatch();
