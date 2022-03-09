@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import AppBar from "../../components/AppBar";
 
 const Gallery = () => {
-  const response = useFetch("https://reqres.in/api/users?page=2", {});
+  const response = useFetch("https://reqres.in/api/users?page=2");
   if (!response) {
     return <div>Loading...</div>;
   }

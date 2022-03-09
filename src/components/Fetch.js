@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 
-function useFetch(url, opts) {
+function useFetch(url) {
   const [response, setResponse] = useState(null);
 
   useEffect(() => {
     console.log("fetching..");
 
-    fetch(url, opts)
+    fetch(url)
       .then((response) => response.json())
       .then((res) => {
         setResponse(res.data);
