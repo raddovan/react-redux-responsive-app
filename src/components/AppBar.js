@@ -38,13 +38,14 @@ const ResponsiveAppBar = (props) => {
     setAnchorElUser(null);
   };
   const handleLogin = () => {
-    dispatch(signin());
     dispatch(toggleSnackbarOpen("Welcome Admin, you are now logged in!"));
+    return dispatch(signin());
   };
   const handleCloseMenuList = (item) => {
     if (item === "Logout") {
       setAnchorElUser(null);
       dispatch(toggleSnackbarOpen("Successfully logged out!"));
+      navigate("/");
       return dispatch(signin());
     } else {
       return null;

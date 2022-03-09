@@ -25,7 +25,7 @@ export default function SimpleSnackbar() {
       <Snackbar
         anchorOrigin={{ vertical, horizontal }}
         open={toggle}
-        autoHideDuration={6000}
+        autoHideDuration={2000}
         onClose={handleClose}
         key={vertical + horizontal}
       >
