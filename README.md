@@ -1,5 +1,6 @@
 Simple demo app, with responsive design, like boilerplate with react-router and react-redux state managment.
 
+- React 17.0.2
 - React router V6
 - React redux 7.1
 - MUI 5.5.0

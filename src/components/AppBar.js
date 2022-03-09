@@ -105,19 +105,26 @@ const ResponsiveAppBar = (props) => {
               ))}
             </Menu>
           </Box>
-
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
+          {isLogged ? (
+            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => navigate("/")}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                {page}
+                Home
               </Button>
-            ))}
-          </Box>
-
+              <Button
+                onClick={() => navigate("gallery")}
+                sx={{ my: 2, color: "white", display: "block" }}
+              >
+                List
+              </Button>
+            </Box>
+          ) : (
+            <Box
+              sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
+            ></Box>
+          )}
           <Box sx={{ flexGrow: 0 }}>
             {isLogged ? (
               <>
