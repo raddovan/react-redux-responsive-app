@@ -1,4 +1,4 @@
-Simple demo app, with responsive design, like boilerplate with react-router,react-redux state managment and fetch remote API data.
+Simple demo app, with responsive design, like boilerplate with react-router,react-redux state managment and fetching remote API data.
 
 - React 17.0.2
 - React router V6
