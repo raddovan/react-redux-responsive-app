@@ -81,30 +81,35 @@ const ResponsiveAppBar = (props) => {
             >
               <MenuIcon />
             </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+         
+              {isLogged ? (
+                  <Menu
+                  id="menu-appbar"
+                  anchorEl={anchorElNav}
+                  anchorOrigin={{
+                    vertical: "bottom",
+                    horizontal: "left",
+                  }}
+                  keepMounted
+                  transformOrigin={{
+                    vertical: "top",
+                    horizontal: "left",
+                  }}
+                  open={Boolean(anchorElNav)}
+                  onClose={handleCloseNavMenu}
+                  sx={{
+                    display: { xs: "block", md: "none" },
+                  }}
+                >
+                <MenuItem key={"Home"}  onClick={() => navigate("/")}>
+                  <Typography textAlign="center">Home</Typography>
                 </MenuItem>
-              ))}
-            </Menu>
+                 <MenuItem key={"List"}  onClick={() => navigate("gallery")}>
+                 <Typography textAlign="center">List</Typography>
+               </MenuItem>
+               </Menu>
+              ) : (null)}
+           
           </Box>
           {isLogged ? (
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
