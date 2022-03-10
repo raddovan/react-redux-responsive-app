@@ -104,7 +104,7 @@ const ResponsiveAppBar = (props) => {
                 <MenuItem key={"Home"}  onClick={() => navigate("/")}>
                   <Typography textAlign="center">Home</Typography>
                 </MenuItem>
-                 <MenuItem key={"List"}  onClick={() => navigate("gallery")}>
+                 <MenuItem key={"List"}  onClick={() => navigate("/gallery")}>
                  <Typography textAlign="center">List</Typography>
                </MenuItem>
                </Menu>
@@ -120,7 +120,7 @@ const ResponsiveAppBar = (props) => {
                 Home
               </Button>
               <Button
-                onClick={() => navigate("gallery")}
+                onClick={() => navigate("/gallery")}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 List
