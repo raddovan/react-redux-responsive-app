@@ -27,7 +27,7 @@ const Signin = () => {
                     <input type="submit" value="Sign in"onClick={()=>goto()} name=""/>
                 </div>
                 <div className="inputBx">
-                  <p>Don't have account? <a href="#">Sign up</a></p>
+                  <p>Don't have account? <a href="/#">Sign up</a></p>
                 </div>
             </form>
         </div>
