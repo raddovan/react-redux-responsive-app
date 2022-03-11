@@ -16,7 +16,7 @@ import { signin, toggleSnackbarOpen } from "../actions";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import { useNavigate } from "react-router";
 
-const pages = ["About Me", "Gallery"];
+
 const settings = ["Profile", "Logout"];
 
 const ResponsiveAppBar = (props) => {
