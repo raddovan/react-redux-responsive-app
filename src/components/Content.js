@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-grid-system";
-import ai from "../assets/ai.png";
+import ai from "../assets/cube.png";
 import Typography from "@mui/material/Typography";
 import "./styling.css";
 
