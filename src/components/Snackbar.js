@@ -1,7 +1,7 @@
 import * as React from "react";
 import Snackbar from "@mui/material/Snackbar";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleSnackbarClose } from "../actions";
+import { toggleSnackbarClose } from "../Redux/actions";
 import MuiAlert from "@mui/material/Alert";
 
 const Alert = React.forwardRef(function Alert(props, ref) {

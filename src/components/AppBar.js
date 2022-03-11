@@ -12,10 +12,9 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import logo from "../assets/logo3.png";
 import { useSelector, useDispatch } from "react-redux";
-import { signin, toggleSnackbarOpen } from "../actions";
+import { signin, toggleSnackbarOpen } from "../Redux/actions";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import { useNavigate } from "react-router";
-
 
 const settings = ["Profile", "Logout"];
 
@@ -81,35 +80,34 @@ const ResponsiveAppBar = (props) => {
             >
               <MenuIcon />
             </IconButton>
-         
-              {isLogged ? (
-                  <Menu
-                  id="menu-appbar"
-                  anchorEl={anchorElNav}
-                  anchorOrigin={{
-                    vertical: "bottom",
-                    horizontal: "left",
-                  }}
-                  keepMounted
-                  transformOrigin={{
-                    vertical: "top",
-                    horizontal: "left",
-                  }}
-                  open={Boolean(anchorElNav)}
-                  onClose={handleCloseNavMenu}
-                  sx={{
-                    display: { xs: "block", md: "none" },
-                  }}
-                >
-                <MenuItem key={"Home"}  onClick={() => navigate("/")}>
+
+            {isLogged ? (
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorElNav}
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "left",
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "left",
+                }}
+                open={Boolean(anchorElNav)}
+                onClose={handleCloseNavMenu}
+                sx={{
+                  display: { xs: "block", md: "none" },
+                }}
+              >
+                <MenuItem key={"Home"} onClick={() => navigate("/")}>
                   <Typography textAlign="center">Home</Typography>
                 </MenuItem>
-                 <MenuItem key={"List"}  onClick={() => navigate("/gallery")}>
-                 <Typography textAlign="center">List</Typography>
-               </MenuItem>
-               </Menu>
-              ) : (null)}
-           
+                <MenuItem key={"List"} onClick={() => navigate("/list")}>
+                  <Typography textAlign="center">List</Typography>
+                </MenuItem>
+              </Menu>
+            ) : null}
           </Box>
           {isLogged ? (
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
@@ -120,7 +118,7 @@ const ResponsiveAppBar = (props) => {
                 Home
               </Button>
               <Button
-                onClick={() => navigate("/gallery")}
+                onClick={() => navigate("/list")}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 List

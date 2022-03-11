@@ -1,10 +1,10 @@
 import React from "react";
 import { Container, Row, Col } from "react-grid-system";
-import ai from "../assets/cube.png";
+import ai from "../../assets/cube.png";
 import Typography from "@mui/material/Typography";
 import "./styling.css";
 
-function Content() {
+function Home() {
   return (
     <Container className="content">
       <Row align="center">
@@ -25,4 +25,4 @@ function Content() {
   );
 }
 
-export default Content;
+export default Home;
