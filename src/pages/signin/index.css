@@ -12,8 +12,8 @@
   height: 100vh;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
-
 .imgBx {
   position: relative;
   width: 50%;
@@ -22,6 +22,14 @@
   box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(40px);
 }
+@media screen and (max-width:540px) {
+  .contentBx { flex-basis: 100%;   }
+  .imgBx {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 
 .contentBx {
   display: flex;
